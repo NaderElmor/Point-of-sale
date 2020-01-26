@@ -1,0 +1,23 @@
+1- Appserviceprovider in boot function
+
+2- .env for DB
+
+3- php artisan make:auth + php artisan migrate:fresh
+
+
+4- make folder for the dashboard routes and
+5- go to RouteServiceProvider.php to map to the web.php and make dashboard folder in controller
+
+
+6- write route function in the web.php of the dashboard
+
+7- go to config/app.php and change local and fallback to ar
+
+8- take the arabic folder and put it in resources/lang
+
+9- add the layout of the dashboard(dashborard folder) in  resources\views\layouts\dashboard
+10- add the design of the dashboard in a folder in views
+
+11- make dashboard controller in dashboard
+
+12- make the site.php in both lang ar + en
