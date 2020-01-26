@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-{{--<html dir="{{ LaravelLocalization::getCurrentLocaleDirection() }}">--}}
+<html dir="{{ LaravelLocalization::getCurrentLocaleDirection() }}">
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -169,18 +170,18 @@
 
                     {{--<!-- Tasks: style can be found in dropdown.less -->--}}
                     <li class="dropdown tasks-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-flag-o"></i></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"></i></a>
                         <ul class="dropdown-menu">
                             <li>
                                 {{--<!-- inner menu: contains the actual data -->--}}
                                 <ul class="menu">
-                                    {{--@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)--}}
-                                        {{--<li>--}}
-                                            {{--<a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">--}}
-                                                {{--{{ $properties['native'] }}--}}
-                                            {{--</a>--}}
-                                        {{--</li>--}}
-                                    {{--@endforeach--}}
+                                    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                        <li>
+                                            <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                                {{ $properties['native'] }}
+                                            </a>
+                                        </li>
+                                    @endforeach
                                 </ul>
                             </li>
                         </ul>

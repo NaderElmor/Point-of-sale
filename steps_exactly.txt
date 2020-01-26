@@ -20,4 +20,15 @@
 
 11- make dashboard controller in dashboard
 
-12- make the site.php in both lang ar + en
+12- make the site.php in both lang ar + en and use @lang in views
+
+13- download localization package 1.3
+- modify config/laravellocalization.php
+- modify in http/kernel.php
+- modify  in  route
+- modify in view app()->getLocale() == 'ar' and 'en'
+- Creating a language selector foreach in view to show all langs options
+- Creating  in view to rtl and ltr
+
+
+

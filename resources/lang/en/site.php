@@ -2,5 +2,6 @@
 
 return [
 
-    'dashboard' => 'dashboard'
+    'dashboard' => 'dashboard',
+    'categories' => 'categories'
     ];
