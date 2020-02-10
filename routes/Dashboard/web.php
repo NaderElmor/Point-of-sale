@@ -10,7 +10,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
         Route::get('index', 'DashboardController@index')->name('index');
 
     });// end of dashboard routes
-});
+
+});//end of localization  routes
 
 
 

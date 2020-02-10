@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html dir="{{ LaravelLocalization::getCurrentLocaleDirection() }}">
 
-<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -170,7 +169,8 @@
 
                     {{--<!-- Tasks: style can be found in dropdown.less -->--}}
                     <li class="dropdown tasks-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"></i></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe">{{@log(site.dashboard)}}
+                            </i></a>
                         <ul class="dropdown-menu">
                             <li>
                                 {{--<!-- inner menu: contains the actual data -->--}}
@@ -331,4 +331,4 @@
 </script>
 @stack('scripts')
 </body>
-</html>
+</>

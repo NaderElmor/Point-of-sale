@@ -11,11 +11,16 @@
 
 6- write route function in the web.php of the dashboard
 
+
+**********
+language *
+**********
 7- go to config/app.php and change local and fallback to ar
 
 8- take the arabic folder and put it in resources/lang
 
 9- add the layout of the dashboard(dashborard folder) in  resources\views\layouts\dashboard
+
 10- add the design of the dashboard in a folder in views
 
 11- make dashboard controller in dashboard
@@ -28,7 +33,7 @@
 - modify  in  route
 - modify in view app()->getLocale() == 'ar' and 'en'
 - Creating a language selector foreach in view to show all langs options
-- Creating  in view to rtl and ltr
+- Creating <html dir="{{ LaravelLocalization::getCurrentLocaleDirection() }}"> in  in view to rtl and ltr
 
 
 
