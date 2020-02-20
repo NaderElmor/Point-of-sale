@@ -10,7 +10,7 @@
             <h1>Admin</h1>
 
             <ol class="breadcrumb">
-                <li class="active"><i class="fa fa-dashboard"></i>dashboard</li>
+               <a href="{{route('dashboard.index')}}"> <li class="active">@lang('site.dashboard')</li></a>
             </ol>
         </section>
 

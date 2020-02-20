@@ -227,10 +227,10 @@
     </header>
 
     @include('layouts.dashboard._aside')
-    
+
     @yield('content')
 
-    {{--@include('partials._session')--}}
+    @include('partials._session')
 
     <footer class="main-footer">
         <div class="pull-right hidden-xs">
@@ -327,7 +327,7 @@
         CKEDITOR.config.language =  "{{ app()->getLocale() }}";
 
     });//end of ready
-    
+
 </script>
 @stack('scripts')
 </body>
