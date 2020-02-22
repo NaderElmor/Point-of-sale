@@ -42,15 +42,15 @@
                             <label>@lang('site.email')</label>
                             <input type="email" name="email" class="form-control" value="{{ old('email') }}">
                         </div>
-{{--
+
                         <div class="form-group">
                             <label>@lang('site.image')</label>
                             <input type="file" name="image" class="form-control image">
-                        </div> --}}
+                        </div>
 
-                        {{-- <div class="form-group">
-                            <img src="{{ asset('uploads/user_images/default.png') }}"  style="width: 100px" class="img-thumbnail image-preview" alt="">
-                        </div> --}}
+                        <div class="form-group">
+                            <img src="{{ asset('uploads/user_images/default_user.png') }}"  style="width: 100px" class="img-thumbnail image-preview" alt="">
+                        </div> 
 
                         <div class="form-group">
                             <label>@lang('site.password')</label>
@@ -91,7 +91,7 @@
 
                                     @endforeach
 
-                                </div><!-- end of tab content -->
+                                </div><!-- end of tab content -->-
 
                             </div><!-- end of nav tabs -->
 

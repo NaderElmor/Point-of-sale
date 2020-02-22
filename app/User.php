@@ -18,8 +18,10 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','image'
     ];
+
+    protected $appends = ['image_path'];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -28,14 +30,16 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password', 'remember_token',
-    ];
+    ]; 
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
+  
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function getImagePathAttribute(){
+
+        return asset('uploads/user_images/'. $this->image);
+    }
 }
