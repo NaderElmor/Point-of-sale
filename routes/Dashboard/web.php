@@ -8,8 +8,12 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
         Route::get('/', 'WelcomeController@index')->name('welcome');
         Route::get('index', 'DashboardController@index')->name('index');
 
-        //user routes
+        //users routes
         Route::resource('/users', 'UserController');
+
+
+        //categories routes
+        Route::resource('/categories', 'CategoryController');
 
 
 
