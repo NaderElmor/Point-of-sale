@@ -36,18 +36,26 @@ class CategoryController extends Controller
     }
 
 
-    public function store(Request $request)
-    {
-        $request->validate([
-            'name' =>'required|unique:categories'
-        ]);
+    public function store(Request $request) {
+        $rules = [];
+
+        foreach (config('translatable.locales') as $locale) {
+
+            $rules += [$locale . '.name' => ['required', Rule::unique('category_translations', 'name')] ];
+
+        }//end of for each
+
+        $request->validate($rules);
+
 
        //create the category
        Category::create($request->all());
 
        session()->flash('success', __('site.added_successfully'));
 
-      return redirect()->route('dashboard.categories.index');    }
+      return redirect()->route('dashboard.categories.index');   
+    
+    }
 
   
 
@@ -69,14 +77,18 @@ class CategoryController extends Controller
     public function update(Request $request, Category $category)
     {
 
-       //The validation
-       $request->validate([
-        'name' => ['required', Rule::unique('categories')->ignore($category->id),],
-    
+      
+        $rules = [];
 
-    ]);
+        foreach (config('translatable.locales') as $locale) {
 
-        
+            $rules += [$locale . '.name' => ['required', Rule::unique('category_translations', 'name')->ignore($category->id, 'category_id')]];
+
+        }//end of for each
+
+        $request->validate($rules);
+
+
         $category->update($request->all());
 
         session()->flash('success', __('site.updated_successfully'));
