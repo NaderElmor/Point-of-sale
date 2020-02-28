@@ -18,7 +18,7 @@
 
                 </section>
 
-                <h3 class="box-title">@lang('site.users')</h3>
+                <h3 class="box-title">@lang('site.users')</h3> <span class="label label-success ">{{$users->total()}}</span>
             </div>
 
             <form action="{{route('dashboard.users.index')}}">
@@ -65,9 +65,9 @@
 
                 </thead>
                 <tbody>
-                    @foreach ($users as $user)
+                    @foreach ($users as $index=>$user)
                     <tr>
-                        <td>{{$user->id}}</td>
+                        <td>{{$index + 1}}</td>
                         <td>{{$user->name}}</td>
 
                     <td><img src="{{$user->image_path}}" style="width:90px" class="img-responsive img-thumbnail" alt=""></td>

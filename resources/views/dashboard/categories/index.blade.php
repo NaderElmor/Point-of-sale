@@ -18,7 +18,7 @@
 
                 </section>
 
-                <h3 class="box-title">@lang('site.categories')</h3>
+                <h3 class="box-title">@lang('site.categories')</h3> <span class="label label-success ">{{$categories->total()}}</span>
             </div>
 
             <form action="{{route('dashboard.categories.index')}}">
@@ -64,9 +64,9 @@
 
                 </thead>
                 <tbody>
-                    @foreach ($categories as $category)
+                    @foreach ($categories as $index=>$category)
                     <tr>
-                        <td>{{$category->id}}</td>
+                        <td>{{$index + 1 }}</td>
                         <td>{{$category->name}}</td>
 
                         {{-- //Actions --}}

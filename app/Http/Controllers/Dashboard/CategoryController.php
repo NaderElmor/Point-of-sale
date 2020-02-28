@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Validation\Rule;
 
 
+
 class CategoryController extends Controller
 {
    
@@ -19,7 +20,7 @@ class CategoryController extends Controller
 
             return $q->when($request->search, function ($query) use ($request) {
 
-                return $query->where('name','like','%'. $request->search .'%');
+                return $query->whereTranslationLike('name','%'. $request->search .'%');
             });
 
         })->latest()->paginate(3);
