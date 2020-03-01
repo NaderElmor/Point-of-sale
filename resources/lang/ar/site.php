@@ -52,7 +52,7 @@ return [
     'name' => 'الاسم',
     'description' => 'الوصف',
     'products_count' => 'عدد الامنتجات',
-    'related_products' => 'المنتجات المرتبطه',
+    'related_products' => 'المنتجات المرتبطة',
     'category' => 'القسم',
     'show_products' => 'عرض المنتجات',
     'created_at' => 'تم اضافته',

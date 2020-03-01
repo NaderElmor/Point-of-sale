@@ -60,6 +60,9 @@
                     <tr>
                         <td>#</td>
                         <td>@lang('site.name')</td>
+                        <td>@lang('site.products_count')</td>
+                        <td>@lang('site.related_products')</td>
+                        <td>@lang('site.action')</td>
                     </tr>
 
                 </thead>
@@ -68,6 +71,10 @@
                     <tr>
                         <td>{{$index + 1 }}</td>
                         <td>{{$category->name}}</td>
+                        <td>{{$category->products->count()}}</td>
+
+
+                        <td><a class="btn btn-primary btn-sm" href="{{route('dashboard.products.index', ['category_id' => $category->id])}}">منتجات الصنف</a></td>
 
                         {{-- //Actions --}}
                         <td>
