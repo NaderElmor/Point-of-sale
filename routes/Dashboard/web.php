@@ -19,6 +19,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
         //products routes
         Route::resource('/products', 'ProductController');
 
+        //products routes
+        Route::resource('/clients', 'ClientController');
+
 
 
     });// end of dashboard routes
