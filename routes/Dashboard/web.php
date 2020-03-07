@@ -2,11 +2,10 @@
 
 Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 {
-    /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
     Route::prefix('dashboard')->name('dashboard.')->middleware('auth')->group(function (){
 
-        Route::get('/', 'WelcomeController@index')->name('welcome');
-        Route::get('index', 'DashboardController@index')->name('index');
+        Route::get('/welcome', 'WelcomeController@index')->name('welcome');
+        Route::get('/', 'WelcomeController@index')->name('index');
 
         //users routes
         Route::resource('/users', 'UserController');
@@ -19,8 +18,12 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
         //products routes
         Route::resource('/products', 'ProductController');
 
-        //products routes
+        //clients routes
         Route::resource('/clients', 'ClientController');
+
+
+         //orders' clients routes
+        Route::resource('clients.orders', 'Client\OrderController');
 
 
 

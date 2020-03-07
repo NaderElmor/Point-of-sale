@@ -21,7 +21,7 @@
                 <div class="col-lg-3 col-xs-6">
                     <div class="small-box bg-aqua">
                         <div class="inner">
-                            <h3>{{ $categories_count }}</h3>
+                            {{-- <h3>{{ $categories_count }}</h3> --}}
 
                             <p>@lang('site.categories')</p>
                         </div>
@@ -36,7 +36,7 @@
                 <div class="col-lg-3 col-xs-6">
                     <div class="small-box bg-green">
                         <div class="inner">
-                            <h3>{{ $products_count }}</h3>
+                            {{-- <h3>{{ $products_count }}</h3> --}}
 
                             <p>@lang('site.products')</p>
                         </div>
@@ -51,7 +51,7 @@
                 <div class="col-lg-3 col-xs-6">
                     <div class="small-box bg-red">
                         <div class="inner">
-                            <h3>{{ $clients_count }}</h3>
+                            {{-- <h3>{{ $clients_count }}</h3> --}}
 
                             <p>@lang('site.clients')</p>
                         </div>
@@ -66,7 +66,7 @@
                 <div class="col-lg-3 col-xs-6">
                     <div class="small-box bg-yellow">
                         <div class="inner">
-                            <h3>{{ $users_count }}</h3>
+                            {{-- <h3>{{ $users_count }}</h3> --}}
 
                             <p>@lang('site.users')</p>
                         </div>
@@ -98,7 +98,7 @@
 @endsection
 
 @push('scripts')
-
+{{-- 
     <script>
 
         //line chart
@@ -122,6 +122,6 @@
             gridTextFamily: 'Open Sans',
             gridTextSize: 10
         });
-    </script>
+    </script> --}}
 
 @endpush

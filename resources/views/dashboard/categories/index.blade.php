@@ -9,7 +9,7 @@
 
                     <ol class="breadcrumb">
                         <li>
-                            <a href="{{route('dashboard.index')}}">@lang('site.dashboard')</a>
+                            <a href="{{route('dashboard.welcome')}}">@lang('site.dashboard')</a>
                         </li>
                         <li class="active">@lang('site.categories')
                             <a href="{{route('dashboard.categories.index')}}"></a>

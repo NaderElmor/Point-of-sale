@@ -49,8 +49,9 @@
 
                         <label>@lang('site.phone')</label>
                         <input type="text" name="phone" class="form-control" value="{{ old('phone') }}">
-                        
-                 
+
+
+                         
 
 
                     </div>
