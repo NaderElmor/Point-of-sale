@@ -5,8 +5,8 @@
         <div class="user-panel">
             <div class="pull-left image">
                 <img
-                    src="{{ asset('dashboard_files/img/user2-160x160.jpg') }}"
-                    class="img-circle"
+                src="{{auth()->user()->image_path }}"
+                class="img-circle"
                     alt="User Image"></div>
                 <div class="pull-left info">
                     <p>
@@ -56,11 +56,11 @@
                 </li>
                 @endif @endif
 
-                {{-- @if (auth()->user()->hasPermission('read_orders'))
+                 @if (auth()->user()->hasPermission('read_orders'))
                  <li><a href="{{ route('dashboard.orders.index') }}"><i class="fa fa-th"></i><span>@lang('site.orders')</span></a></li>
                 @endif
 
-                --}}
+                
 
                 {{--<li class="treeview">--}}
                 {{--<a href="#">--}}

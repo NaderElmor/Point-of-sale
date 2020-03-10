@@ -126,7 +126,8 @@
                                     </thead>
 
                                     <tbody class="order-list">
-                                        {{-- Put the data from orderjs --}}
+
+
                                     </tbody>
 
                                 </table><!-- end of table -->
@@ -136,11 +137,11 @@
                                 <button class="btn btn-primary btn-block disabled" id="add-order-form-btn"><i class="fa fa-plus"></i> @lang('site.add_order')</button>
 
                             </form>
-   
+
                         </div><!-- end of box body -->
 
                     </div><!-- end of box -->
-{{-- 
+
                     @if ($client->orders->count() > 0)
 
                         <div class="box box-primary">
@@ -193,7 +194,7 @@
 
                         </div><!-- end of box -->
 
-                    @endif --}}
+                    @endif
 
                 </div><!-- end of col -->
 

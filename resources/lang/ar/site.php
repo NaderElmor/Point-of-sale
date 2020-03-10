@@ -53,6 +53,7 @@ return [
     'description' => 'الوصف',
     'products_count' => 'عدد الامنتجات',
     'related_products' => 'المنتجات المرتبطة',
+    'cat_products'  => 'منتجات الصنف',
     'category' => 'القسم',
     'show_products' => 'عرض المنتجات',
     'created_at' => 'تم اضافته',
@@ -77,4 +78,5 @@ return [
         'description' => 'الوصف بالغه الانجليزيه',
     ],
 
+    'member' => 'عضو'
 ];

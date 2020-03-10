@@ -74,7 +74,7 @@
                         <td>{{$category->products->count()}}</td>
 
 
-                        <td><a class="btn btn-primary btn-sm" href="{{route('dashboard.products.index', ['category_id' => $category->id])}}">منتجات الصنف</a></td>
+                        <td><a class="btn btn-primary btn-sm" href="{{route('dashboard.products.index', ['category_id' => $category->id])}}">@lang('site.cat_products')</a></td>
 
                         {{-- //Actions --}}
                         <td>

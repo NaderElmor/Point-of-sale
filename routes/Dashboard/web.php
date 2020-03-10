@@ -26,6 +26,14 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
         Route::resource('clients.orders', 'Client\OrderController');
 
 
+            //order routes
+            Route::resource('orders', 'OrderController');
+            Route::get('/orders/{order}/products', 'OrderController@products')->name('orders.products');
+
+
+            //user routes
+            Route::resource('users', 'UserController')->except(['show']);
+
 
     });// end of dashboard routes
 
